@@ -1,0 +1,63 @@
+/* GTA VI Trophy Guide — Vice City nights: deep purple, neon pink, warm sand. System fonts only, no network. */
+:root {
+  --bg: #14091f;
+  --panel: #1f0f2e;
+  --panel2: #2a153d;
+  --ink: #f5eefb;
+  --muted: #c9aed8;
+  --pink: #ff2e88;
+  --teal: #19d3c5;
+  --gold: #ffc93c;
+  --silver: #cfd6e4;
+  --bronze: #e0915a;
+  --line: #4a2a63;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink); font: 16px/1.5 system-ui, -apple-system, "Segoe UI", sans-serif; }
+.top { padding: 20px 20px 12px; background: linear-gradient(135deg, #2a0a3d, #12041f 60%, #0a2a2a); border-bottom: 3px solid var(--pink); }
+h1 { margin: 0; font-size: 30px; letter-spacing: 1px; }
+h1 span { color: var(--pink); }
+.sub { color: var(--muted); margin: 4px 0 12px; }
+.progress-wrap { max-width: 720px; }
+.progress-bar { height: 14px; background: #000; border: 1px solid var(--line); border-radius: 7px; overflow: hidden; }
+.progress-fill { height: 100%; background: linear-gradient(90deg, var(--teal), var(--pink)); transition: width .3s; }
+.progress-text { margin: 6px 0 12px; font-weight: 700; }
+.toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.tool { display: flex; gap: 6px; align-items: center; color: var(--muted); font-size: 14px; }
+.tool input[type="search"], .tool select { background: var(--panel); color: var(--ink); border: 1px solid var(--line); border-radius: 6px; padding: 6px 8px; font: inherit; }
+button { background: var(--pink); color: #fff; border: 0; border-radius: 6px; padding: 7px 12px; font: inherit; cursor: pointer; }
+button:hover { filter: brightness(1.15); }
+.tabs { display: flex; gap: 8px; padding: 12px 20px 0; }
+.tab { background: var(--panel); color: var(--ink); border: 1px solid var(--line); }
+.tab.active { background: var(--pink); }
+main { padding: 12px 20px 24px; max-width: 1100px; }
+.count-line, .note { color: var(--muted); }
+.trophy-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.trophy { background: var(--panel); border: 1px solid var(--line); border-left: 6px solid var(--bronze); border-radius: 8px; padding: 12px 14px; }
+.trophy.silver { border-left-color: var(--silver); }
+.trophy.gold { border-left-color: var(--gold); }
+.trophy.platinum { border-left-color: var(--teal); }
+.trophy.earned { opacity: .75; }
+.trophy.earned .tname { text-decoration: line-through; }
+.trophy header { display: flex; gap: 10px; align-items: baseline; flex-wrap: wrap; }
+.tname { font-size: 18px; font-weight: 800; margin: 0; }
+.grade { font-size: 12px; font-weight: 700; text-transform: uppercase; padding: 2px 8px; border-radius: 20px; background: var(--panel2); color: var(--gold); }
+.grade.silver { color: var(--silver); }
+.grade.bronze { color: var(--bronze); }
+.grade.platinum { color: var(--teal); }
+.badge { font-size: 12px; font-weight: 700; padding: 2px 8px; border-radius: 20px; background: #5a1030; color: #ff9ec6; }
+.badge.hidden { background: #333; color: #bbb; }
+.tdesc { color: var(--muted); margin: 6px 0; font-style: italic; }
+.tguide { margin: 6px 0; }
+.tsources { font-size: 13px; color: var(--muted); margin: 6px 0 0; }
+.tsources a { color: var(--teal); }
+.tcount { font-size: 13px; color: var(--gold); font-weight: 700; }
+.trophy label.earn { display: flex; gap: 8px; align-items: center; font-weight: 700; cursor: pointer; }
+.trophy label.earn input { width: 18px; height: 18px; accent-color: var(--pink); }
+.detail { position: fixed; right: 16px; top: 16px; width: min(430px, 92vw); max-height: 88vh; overflow: auto; background: var(--panel2); border: 2px solid var(--pink); border-radius: 10px; padding: 16px; z-index: 10; }
+.close { float: right; }
+.phase { background: var(--panel); border: 1px solid var(--line); border-radius: 8px; padding: 14px; margin-bottom: 12px; }
+.phase h3 { margin: 0 0 4px; color: var(--teal); }
+.phase .hours { color: var(--gold); font-weight: 700; font-size: 14px; }
+footer { padding: 16px 20px 28px; color: var(--muted); font-size: 13px; border-top: 1px solid var(--line); }
+@media (max-width: 640px) { h1 { font-size: 24px; } .detail { right: 8px; left: 8px; width: auto; } }
